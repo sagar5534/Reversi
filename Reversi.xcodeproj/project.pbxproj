@@ -10,7 +10,11 @@
 		BDA04D1A2199134A00F49F51 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D182199134A00F49F51 /* Board.cpp */; };
 		BDA04D1D2199137500F49F51 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D1B2199137500F49F51 /* Player.cpp */; };
 		BDA04D20219913A200F49F51 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D1E219913A200F49F51 /* Game.cpp */; };
+<<<<<<< HEAD
 		BDA04D232199385500F49F51 /* ComputerPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D212199385500F49F51 /* ComputerPlayer.cpp */; };
+=======
+		BDA04D262199394C00F49F51 /* ComputerPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D242199394C00F49F51 /* ComputerPlayer.cpp */; };
+>>>>>>> Game
 		BDC7537B2198D51B00D0780D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDC7537A2198D51B00D0780D /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +37,13 @@
 		BDA04D1C2199137500F49F51 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		BDA04D1E219913A200F49F51 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		BDA04D1F219913A200F49F51 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		BDA04D212199385500F49F51 /* ComputerPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ComputerPlayer.cpp; sourceTree = "<group>"; };
 		BDA04D222199385500F49F51 /* ComputerPlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComputerPlayer.hpp; sourceTree = "<group>"; };
+=======
+		BDA04D242199394C00F49F51 /* ComputerPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ComputerPlayer.cpp; sourceTree = "<group>"; };
+		BDA04D252199394C00F49F51 /* ComputerPlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComputerPlayer.hpp; sourceTree = "<group>"; };
+>>>>>>> Game
 		BDC753772198D51B00D0780D /* Reversi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Reversi; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC7537A2198D51B00D0780D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,8 +83,13 @@
 				BDA04D192199134A00F49F51 /* Board.hpp */,
 				BDA04D1B2199137500F49F51 /* Player.cpp */,
 				BDA04D1C2199137500F49F51 /* Player.hpp */,
+<<<<<<< HEAD
 				BDA04D212199385500F49F51 /* ComputerPlayer.cpp */,
 				BDA04D222199385500F49F51 /* ComputerPlayer.hpp */,
+=======
+				BDA04D242199394C00F49F51 /* ComputerPlayer.cpp */,
+				BDA04D252199394C00F49F51 /* ComputerPlayer.hpp */,
+>>>>>>> Game
 				BDA04D1E219913A200F49F51 /* Game.cpp */,
 				BDA04D1F219913A200F49F51 /* Game.hpp */,
 			);
@@ -139,7 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA04D1A2199134A00F49F51 /* Board.cpp in Sources */,
+<<<<<<< HEAD
 				BDA04D232199385500F49F51 /* ComputerPlayer.cpp in Sources */,
+=======
+				BDA04D262199394C00F49F51 /* ComputerPlayer.cpp in Sources */,
+>>>>>>> Game
 				BDC7537B2198D51B00D0780D /* main.cpp in Sources */,
 				BDA04D1D2199137500F49F51 /* Player.cpp in Sources */,
 				BDA04D20219913A200F49F51 /* Game.cpp in Sources */,
