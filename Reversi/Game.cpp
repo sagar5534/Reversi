@@ -23,12 +23,14 @@ Game::Game(){
 void Game::selectPlayers(){
   int playertoplayer = 1;
   int playertocomputer = 2;
+  int computertocomputer = 3
   int choose;
   cin >> choose;
   if (choose = playertocomputer){
     string name;
     cout << "Enter the players name";
     cin>> name;
+
 
   }
 }
