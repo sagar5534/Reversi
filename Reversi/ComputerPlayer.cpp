@@ -7,4 +7,12 @@
 //
 
 #include "ComputerPlayer.hpp"
-//TEST
+
+ComputerPlayer::ComputerPlayer(Piece i) : Player("name", i){
+    string name = "sudofjh";
+    numberOfInstance++;
+    
+    
+}
+
+

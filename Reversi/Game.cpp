@@ -8,6 +8,8 @@
 
 #include "Game.hpp"
 #include <iostream>
+#include "Board.hpp"
+#include "Player.hpp"
 using namespace std;
 
 Game::Game(){

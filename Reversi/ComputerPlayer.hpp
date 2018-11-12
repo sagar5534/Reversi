@@ -13,7 +13,17 @@
 #include "Player.hpp"
 
 class ComputerPlayer : public Player{
-    //TEST
+    
+private:
+    string name;
+    Piece piece;
+    static int numberOfInstance;
+    
+public:
+    ComputerPlayer(Piece);
+    //Piece getPiece() const;
+    virtual ~ComputerPlayer();
+    
 };
 
 
