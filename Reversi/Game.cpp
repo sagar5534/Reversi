@@ -7,3 +7,15 @@
 //
 
 #include "Game.hpp"
+#include <iostream>
+using namespace std;
+
+Game::Game(){
+  board.reset();
+  p1 = nullptr;
+  p2 = nullptr;
+}
+~Game(){
+  delete p1;
+  delete p2;
+}
