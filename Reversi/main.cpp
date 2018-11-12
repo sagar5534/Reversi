@@ -13,7 +13,7 @@ int main() {
     // insert code here...
     cout << "Hello, World!\n";
     cout<<"Whats up!"<<endl;
-    cout << "What a Noob!!";
+    cout << "What a DICK!!";
 
     return 0;
 
