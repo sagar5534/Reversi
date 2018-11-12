@@ -21,7 +21,7 @@ class Board{
 
     public:
         Board();
-
+    
 };
 
 

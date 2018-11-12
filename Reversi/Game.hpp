@@ -10,17 +10,5 @@
 #define Game_hpp
 
 #include <stdio.h>
-class Game{
-private:
-  Board board;
-  Player *p1,*p2;
-public:
-  Game();
-  ~Game();
-  void selectPlayers();
-  Player* nextPlayer() const;
-  void play();
-  void announceWinner();
 
-}
 #endif /* Game_hpp */
