@@ -10,5 +10,20 @@
 #define Player_hpp
 
 #include <stdio.h>
+#include <string>
+#include "Board.hpp"
+
+using namespace std;
+
+class Player {
+    protected:
+    //Check if needed
+    //Piece piece;
+    public:
+        Player( const string&, Piece);
+        Piece getPiece() const;
+        virtual void makeMove( Board& ) = 0;
+        virtual ~Player();
+};
 
 #endif /* Player_hpp */

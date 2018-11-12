@@ -11,4 +11,18 @@
 
 #include <stdio.h>
 
+
+
+enum class Piece : char {
+    WHITE = 'O', DARK = 'X', EMPTY = '.'
+};
+
+class Board{
+
+    public:
+        Board();
+    
+};
+
+
 #endif /* Board_hpp */
