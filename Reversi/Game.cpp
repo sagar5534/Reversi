@@ -19,3 +19,16 @@ Game::Game(){
   delete p1;
   delete p2;
 }
+
+void Game::selectPlayers(){
+  int playertoplayer = 1;
+  int playertocomputer = 2;
+  int choose;
+  cin >> choose;
+  if (choose = playertocomputer){
+    string name;
+    cout << "Enter the players name";
+    cin>> name;
+
+  }
+}

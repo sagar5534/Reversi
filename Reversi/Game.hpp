@@ -13,7 +13,7 @@
 class Game{
 private:
   Board board;
-  Player *n1,*n2;
+  Player *p1,*p2;
 public:
   Game();
   ~Game();
