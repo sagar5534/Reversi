@@ -6,13 +6,15 @@
 //  Copyright © 2018 Sagar. All rights reserved.
 //
 
+
+#include <string>
+#include <iostream>
 #include "ComputerPlayer.hpp"
 
-ComputerPlayer::ComputerPlayer(Piece i) : Player("name", i){
-    string name = "sudofjh";
+ComputerPlayer::ComputerPlayer(Piece i) : Player("Computer" + std::to_string(numberOfInstance), i){
     numberOfInstance++;
     
-    
 }
+
 
 

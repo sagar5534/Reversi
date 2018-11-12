@@ -21,10 +21,8 @@ private:
     
 public:
     ComputerPlayer(Piece);
+    virtual ~ComputerPlayer() = 0;
     //Piece getPiece() const;
-    virtual ~ComputerPlayer();
-    
 };
-
 
 #endif /* ComputerPlayer_hpp */

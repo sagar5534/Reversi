@@ -11,7 +11,6 @@
 		BDA04D1D2199137500F49F51 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D1B2199137500F49F51 /* Player.cpp */; };
 		BDA04D20219913A200F49F51 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D1E219913A200F49F51 /* Game.cpp */; };
 		BDA04D232199385500F49F51 /* ComputerPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA04D212199385500F49F51 /* ComputerPlayer.cpp */; };
-		BDC7537B2198D51B00D0780D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDC7537A2198D51B00D0780D /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,7 +35,6 @@
 		BDA04D212199385500F49F51 /* ComputerPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ComputerPlayer.cpp; sourceTree = "<group>"; };
 		BDA04D222199385500F49F51 /* ComputerPlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComputerPlayer.hpp; sourceTree = "<group>"; };
 		BDC753772198D51B00D0780D /* Reversi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Reversi; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDC7537A2198D51B00D0780D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +67,6 @@
 		BDC753792198D51B00D0780D /* Reversi */ = {
 			isa = PBXGroup;
 			children = (
-				BDC7537A2198D51B00D0780D /* main.cpp */,
 				BDA04D182199134A00F49F51 /* Board.cpp */,
 				BDA04D192199134A00F49F51 /* Board.hpp */,
 				BDA04D1B2199137500F49F51 /* Player.cpp */,
@@ -140,7 +137,6 @@
 			files = (
 				BDA04D1A2199134A00F49F51 /* Board.cpp in Sources */,
 				BDA04D232199385500F49F51 /* ComputerPlayer.cpp in Sources */,
-				BDC7537B2198D51B00D0780D /* main.cpp in Sources */,
 				BDA04D1D2199137500F49F51 /* Player.cpp in Sources */,
 				BDA04D20219913A200F49F51 /* Game.cpp in Sources */,
 			);

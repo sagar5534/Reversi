@@ -20,10 +20,10 @@ private:
 public:
     Game();
     ~Game();
-    void selectPlayers();
-    Player* nextPlayer() const;
-    void play();
-    void announceWinner();
+    //void selectPlayers();
+    //Player* nextPlayer() const;
+    //void play();
+    //void announceWinner();
     
 };
 #endif /* Game_hpp */
