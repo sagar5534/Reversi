@@ -14,7 +14,7 @@ int main() {
     cout << "Hello, World!\n";
     cout<<"Whats up!"<<endl;
     cout << "What a DICK!!";
-
+    cout<<"Noob"<<endl; 
     return 0;
 
 }
