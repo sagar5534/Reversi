@@ -7,8 +7,6 @@
 //
 
 #include "Game.hpp"
-<<<<<<< HEAD
-=======
 #include <iostream>
 using namespace std;
 
@@ -36,4 +34,3 @@ void Game::selectPlayers(){
 
   }
 }
->>>>>>> Game
