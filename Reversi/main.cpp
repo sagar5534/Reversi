@@ -12,6 +12,7 @@ using namespace std;
 int main() {
     // insert code here...
     cout << "Hello, World!\n";
+    cout<<"Whats up!"<<endl;
     cout << "What a Noob!!";
 
     return 0;
