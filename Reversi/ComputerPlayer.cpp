@@ -13,6 +13,9 @@
 
 ComputerPlayer::ComputerPlayer(Piece i) : Player("Computer" + std::to_string(numberOfInstance), i){
     numberOfInstance++;
+}
+
+ComputerPlayer::~ComputerPlayer(){
     
 }
 

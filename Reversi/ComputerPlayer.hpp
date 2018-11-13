@@ -13,15 +13,15 @@
 #include "Player.hpp"
 
 class ComputerPlayer : public Player{
-    
+
 private:
     string name;
     Piece piece;
     static int numberOfInstance;
-    
+
 public:
     ComputerPlayer(Piece);
-    virtual ~ComputerPlayer() = 0;
+    virtual ~ComputerPlayer();
     //Piece getPiece() const;
 };
 
