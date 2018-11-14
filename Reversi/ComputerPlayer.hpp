@@ -9,9 +9,10 @@
 #ifndef ComputerPlayer_hpp
 #define ComputerPlayer_hpp
 
-#include <stdio.h>
-#include "Player.hpp"
 
+#include "Player.hpp"
+#include <iostream>
+  
 class ComputerPlayer : public Player{
 
 private:
@@ -19,8 +20,9 @@ private:
     static int numberOfInstance;
 
 public:
+   
     ComputerPlayer(Piece);
-    virtual ~ComputerPlayer();
+    ~ComputerPlayer();
     
 };
 
