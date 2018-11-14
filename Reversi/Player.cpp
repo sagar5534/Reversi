@@ -7,6 +7,8 @@
 //
 
 #include "Player.hpp"
+#include <iostream>
+using namespace std;
 
 Player::Player( const string& selectedName, Piece color ){
     name = selectedName;

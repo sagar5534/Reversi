@@ -10,9 +10,13 @@
 #include <string>
 #include <iostream>
 #include "ComputerPlayer.hpp"
+using namespace std;
 
-ComputerPlayer::ComputerPlayer(Piece i) : Player("Computer" + std::to_string(numberOfInstance), i){
-    numberOfInstance++;
+ComputerPlayer::ComputerPlayer(Piece i) 
+{    numberOfInstance++;
+      Player(const string& selectedName + to_string(numberOfInstance), i)
+
+   
 }
 
 ComputerPlayer::~ComputerPlayer(){
