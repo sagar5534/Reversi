@@ -12,10 +12,11 @@
 #include "ComputerPlayer.hpp"
 
 using namespace std;
-
-ComputerPlayer::ComputerPlayer(Piece i):Player("Computer",i)
-{
+static int numberOfInstance = 65 ; 
+ComputerPlayer::ComputerPlayer(Piece i):Player("Computer"+to_string(numberOfInstance),i)
+{   
     
+    numberOfInstance++;
 }
 
 ComputerPlayer::~ComputerPlayer(){

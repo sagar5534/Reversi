@@ -12,16 +12,16 @@
 
 #include "Player.hpp"
 #include <iostream>
-  
+ 
 class ComputerPlayer : public Player{
 
 private:
    
-    static int numberOfInstance;
+    //static int numberOfInstance;
 
 public:
-   
-    ComputerPlayer(Piece);
+    
+    ComputerPlayer(Piece i );
     ~ComputerPlayer();
     
 };
