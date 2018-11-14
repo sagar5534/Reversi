@@ -15,14 +15,13 @@
 class ComputerPlayer : public Player{
 
 private:
-    string name;
-    Piece piece;
+   
     static int numberOfInstance;
 
 public:
     ComputerPlayer(Piece);
     virtual ~ComputerPlayer();
-    //Piece getPiece() const;
+    
 };
 
 #endif /* ComputerPlayer_hpp */
