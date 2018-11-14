@@ -21,8 +21,8 @@ const Move nullMove = -1;
 class Board{
 
     private:
-        //May be Move titles
-        int titles [64];
+        //May be Move tiles
+        Piece tiles [64];
     public:
         Board();
         void reset();

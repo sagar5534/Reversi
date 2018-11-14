@@ -7,16 +7,29 @@
 //
 
 #include "Board.hpp"
+#include <iostream>
+using namespace std;
 
 Board::Board(){
-
+    reset();
 }
 
 void Board::reset(){
 
+    Piece tiles [64];
+    for (int i = 0; i < 64; i++) {
+        tiles[i] = Piece::EMPTY;
+    }
+
 }
 
 void Board::display(){
+
+    std::cout << "--------------------" << '\n';
+
+
+
+    std::cout << "--------------------" << '\n';
 
 }
 
