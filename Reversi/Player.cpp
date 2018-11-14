@@ -11,6 +11,7 @@
 Player::Player( const string& selectedName, Piece color ){
     name = selectedName;
     piece = color;
+    
 }
 
 Piece Player::getPiece() const {
