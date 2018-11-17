@@ -8,10 +8,16 @@
 
 #include <iostream>
 using namespace std;
+#include "Player.hpp"
+#include "Board.hpp"
+#include "ComputerPlayer.hpp"
+#include "Game.hpp"
+#include "HumanPlayer.hpp"
 
 int main() {
     // insert code here...
     cout << "Hello, World!\n";
 
-     
+    Player * pl = new HumanPlayer();
+
 }

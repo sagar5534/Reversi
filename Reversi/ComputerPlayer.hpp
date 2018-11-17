@@ -12,18 +12,17 @@
 
 #include "Player.hpp"
 #include <iostream>
- 
+
 class ComputerPlayer : public Player{
 
 private:
-   
+
     static int numberOfInstance;
 
 public:
-    
+
     ComputerPlayer(Piece i );
-   virtual ~ComputerPlayer();
-    
+
 };
 
 #endif /* ComputerPlayer_hpp */
