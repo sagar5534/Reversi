@@ -8,7 +8,7 @@
 class HumanPlayer : public Player
 {
   public:
-     ~HumanPlayer();
+    virtual ~HumanPlayer();
     virtual void makeMove(Board&);
   
     

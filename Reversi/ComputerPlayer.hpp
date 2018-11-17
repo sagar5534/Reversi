@@ -17,12 +17,12 @@ class ComputerPlayer : public Player{
 
 private:
    
-    //static int numberOfInstance;
+    static int numberOfInstance;
 
 public:
     
     ComputerPlayer(Piece i );
-    ~ComputerPlayer();
+   virtual ~ComputerPlayer();
     
 };
 

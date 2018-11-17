@@ -10,11 +10,15 @@
 #include <iostream>
 using namespace std;
 
-Player::Player( const string& selectedName, Piece color ){
-    name = selectedName;
-    piece = color;
+Player::Player( const string& name, Piece piece ){
+    this-> name = name;
+    this-> piece = piece;
     
 }
+Player::~Player(){
+    
+}
+
 
 Piece Player::getPiece() const {
     return piece;
