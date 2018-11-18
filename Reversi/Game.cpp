@@ -22,7 +22,6 @@ Game::~Game(){
   delete p1;
   delete p2;
 }
-
 void Game::selectPlayers(){
     int playertoplayer = 1;
     int playertocomputer = 2;
@@ -37,6 +36,7 @@ void Game::selectPlayers(){
     
 
   }
+   
 
 }
  

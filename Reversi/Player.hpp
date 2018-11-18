@@ -22,7 +22,7 @@ class Player {
         virtual void makeMove( Board& ) = 0;
         virtual ~Player();
 
-    private:
+    protected:
         string name;
         Piece piece;
 };

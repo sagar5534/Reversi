@@ -8,10 +8,19 @@
 
 #include <iostream>
 using namespace std;
+#include "Player.hpp"
+#include "Board.hpp"
+#include "ComputerPlayer.hpp"
+#include "Game.hpp"
+#include "HumanPlayer.hpp"
 
 int main() {
     // insert code here...
     cout << "Hello, World!\n";
 
-     
+    Player *p1 = new HumanPlayer("Noob",Piece::DARK);
+    delete p1;
+
+    ComputerPlayer *p2 = new RandomPlayer(Piece::WHITE);
+    delete p2;
 }
