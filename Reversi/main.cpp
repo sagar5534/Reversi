@@ -21,6 +21,6 @@ int main() {
     Player *p1 = new HumanPlayer("Noob",Piece::DARK);
     delete p1;
 
-    Player *p2 = new ComputerPlayer(Piece::WHITE);
+    ComputerPlayer *p2 = new RandomPlayer(Piece::WHITE);
     delete p2;
 }

@@ -23,7 +23,7 @@ public:
 
     ComputerPlayer(Piece i );
     ~ComputerPlayer();
-    void makeMove(Board&) = 0;
+   virtual void makeMove(Board&) = 0;
 
 };
 
