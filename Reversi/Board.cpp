@@ -52,7 +52,7 @@ Piece Board::getPlayer() const{
   return Piece::WHITE;
 }
 
-void Board::getMoves(){
+void Board::genMoves(){
 
 }
 

@@ -13,9 +13,6 @@ RandomPlayer::~RandomPlayer(){
 }
 void RandomPlayer::makeMove(Board& board){
    Move place;
-   place = srand()%64 +1;   
+  place = board.
 
-  if(board.isLegal(Player::getPiece(),place) == true){
-        board.makeMove(Player::getPiece(),place);
-    }
 }

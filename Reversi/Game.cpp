@@ -10,6 +10,7 @@
 #include <iostream>
 #include "Board.hpp"
 #include "Player.hpp"
+#include "HumanPlayer.hpp"
 using namespace std;
 
 Game::Game(){
@@ -32,11 +33,29 @@ void Game::selectPlayers(){
         string name;
         cout << "Enter the players name";
         cin>> name;
-        p1 = new HumanPlayer((name, Piece::Dark));
-    
+      p1 = new HumanPlayer(name, Piece::DARK);
+      delete p1;
 
   }
+}  
+  
+*Player Game::nextPlayer() const {
+    
+}  
+
+void Game::play(){
+    bool isRunning = true;
+   while(board.getMoves() == isRunning){
+       if(board.isLegal(p1.getPiece(),board.getMoves()) == true){
+           
+       }
+   } 
+}
+
+void announceWinner(){
+    
+}
    
 
-}
+ 
  
