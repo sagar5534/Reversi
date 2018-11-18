@@ -14,3 +14,6 @@ ComputerPlayer::ComputerPlayer(Piece i):Player("Computer"+to_string(numberOfInst
 
     numberOfInstance++;
 }
+ComputerPlayer::~ComputerPlayer(){
+    
+}

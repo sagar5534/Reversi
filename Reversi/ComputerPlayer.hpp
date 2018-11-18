@@ -22,6 +22,8 @@ private:
 public:
 
     ComputerPlayer(Piece i );
+    ~ComputerPlayer();
+    void makeMove(Board&) = 0;
 
 };
 

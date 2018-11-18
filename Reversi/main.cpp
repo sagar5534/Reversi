@@ -18,6 +18,9 @@ int main() {
     // insert code here...
     cout << "Hello, World!\n";
 
-    Player * pl = new HumanPlayer();
-
+    Player *p1 = new HumanPlayer("Noob",O);
+    delete p1;
+    
+    Player *p2 = new ComputerPlayer(Piece::White);
+    delete p2;
 }

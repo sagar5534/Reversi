@@ -7,7 +7,10 @@
 
 class HumanPlayer : public Player
 {
-  public:
+    
+
+public:
+    HumanPlayer(string,Piece);
     virtual ~HumanPlayer();
     virtual void makeMove(Board&);
   

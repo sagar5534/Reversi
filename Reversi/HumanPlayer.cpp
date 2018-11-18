@@ -3,6 +3,10 @@
 
 using namespace std;
 
+HumanPlayer::HumanPlayer(string name, Piece piece):Player(name,piece){
+    
+}
+
 HumanPlayer::~HumanPlayer()
 {
 
