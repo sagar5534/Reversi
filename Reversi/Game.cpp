@@ -13,7 +13,7 @@
 using namespace std;
 
 Game::Game(){
-  //board.reset();
+  board.reset();
   p1 = nullptr;
   p2 = nullptr;
 }
@@ -22,7 +22,7 @@ Game::~Game(){
   delete p1;
   delete p2;
 }
-/**
+
 void Game::selectPlayers(){
     int playertoplayer = 1;
     int playertocomputer = 2;
@@ -33,9 +33,10 @@ void Game::selectPlayers(){
         string name;
         cout << "Enter the players name";
         cin>> name;
-
+        p1 = new HumanPlayer((name, Piece::Dark));
+    
 
   }
 
 }
- */
+ 

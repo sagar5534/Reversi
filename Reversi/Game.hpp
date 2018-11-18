@@ -20,7 +20,7 @@ private:
 public:
     Game();
     ~Game();
-    //void selectPlayers();
+    void selectPlayers();
     //Player* nextPlayer() const;
     //void play();
     //void announceWinner();
