@@ -67,13 +67,30 @@ bool Board::isLegal(Piece piece, Move move) const {
     if (move > 63 || move < 0){
         return false;
     }
-
-
+    for (int i = 0; i < counter; i++) {
+        if (availMoves[i] == move){
+            return true;
+        }
+    }
+    return false;
 }
 
 Piece Board::getWinner() const{
 
-    return Piece::WHITE;
+    int darkNum = 0;
+    int whiteNum = 0;
+
+    for (int i = 0; i < 64; ++i){
+        if (tiles[i] == Piece::WHITE){
+            whiteNum++;
+        }else if (tiles[i] == Piece::DARK){
+            darkNum++;
+        }
+        else{
+            return Piece::EMPTY;
+        }
+    }
+    return (darkNum > whiteNum) ? Piece::DARK : Piece::WHITE;
 }
 
 Piece Board::getPlayer() const{
@@ -83,15 +100,12 @@ Piece Board::getPlayer() const{
 
 void Board::addToMoves(int move){
 
-    //cout << "Reached";
     bool contains = false;
-
     for (int i = 0; i < counter; ++i){
         if (availMoves[i] == move){
             contains = true;
         }
     }
-
     if (contains == false){
         availMoves[counter] = move;
         counter++;
@@ -99,8 +113,8 @@ void Board::addToMoves(int move){
 }
 
 void Board::genMoves(){
+
     counter = 0;
-    //delete[] Board::availMoves;
 
     //Process entire Board
     for (int currentTile = 0; currentTile < 64; currentTile++) {
@@ -236,10 +250,9 @@ void Board::genMoves(){
 
 int Board::numMoves() const{
 
-    return 0;
+    return counter;
 }
 
 Move Board::getMove(int move) const{
-
     return 0;
 }
