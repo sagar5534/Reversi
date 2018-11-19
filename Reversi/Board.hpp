@@ -12,13 +12,6 @@
 
 #include <stdio.h>
 
-
-/**
-enum class Piece : char {
-    WHITE = 'O', DARK = 'X', EMPTY = '.'
-};
-*/
-
 //Enum for Types of Pieces
 enum Piece {WHITE, DARK, EMPTY};
 inline const char* ToString(Piece v)
@@ -35,7 +28,6 @@ inline const char* ToString(Piece v)
             return "ERROR";
     }
 }
-
 
 typedef int Move;
 const Move nullMove = -1;
