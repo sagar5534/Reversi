@@ -11,6 +11,7 @@
 #include "Board.hpp"
 #include "Player.hpp"
 #include "HumanPlayer.hpp"
+#include "RandomPlayer.hpp"
 using namespace std;
 
 Game::Game(){
@@ -31,11 +32,10 @@ void Game::selectPlayers(){
     cin >> choose;
     if (choose == playertocomputer){
         string name;
-        cout << "Enter the players name";
+        cout << "Enter the player's name";
         cin>> name;
       p1 = new HumanPlayer(name, Piece::DARK);
-      delete p1;
-
+      p2 = new RandomPlayer(Piece::WHITE);
   }
 }  
   
@@ -44,12 +44,7 @@ void Game::selectPlayers(){
 }  
 
 void Game::play(){
-    bool isRunning = true;
-   while(board.getMoves() == isRunning){
-       if(board.isLegal(p1.getPiece(),board.getMoves()) == true){
-           
-       }
-   } 
+   
 }
 
 void announceWinner(){

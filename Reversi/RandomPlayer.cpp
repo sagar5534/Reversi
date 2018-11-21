@@ -1,6 +1,7 @@
 #include "RandomPlayer.hpp"
 #include "ComputerPlayer.hpp"
 #include "Player.hpp"
+#include "Board.hpp"
 #include <cstdlib>
 #include <iostream>
 using namespace std;
@@ -13,6 +14,7 @@ RandomPlayer::~RandomPlayer(){
 }
 void RandomPlayer::makeMove(Board& board){
    Move place;
-  place = board.
+  place = rand() % board.counter;
+  board.makeMove(Player::getPiece(),place);
 
 }

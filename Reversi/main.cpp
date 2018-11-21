@@ -13,6 +13,7 @@ using namespace std;
 #include "ComputerPlayer.hpp"
 #include "Game.hpp"
 #include "HumanPlayer.hpp"
+#include "RandomPlayer.hpp"
 
 int main() {
     // insert code here...
@@ -20,8 +21,8 @@ int main() {
 
     Player *p1 = new HumanPlayer("Noob",Piece::DARK);
     delete p1;
- /*
-    ComputerPlayer *p2 = new RandomPlayer(Piece::WHITE);
+ 
+    Player *p2= new RandomPlayer(Piece::WHITE);
     delete p2;
-     */
+     
 }

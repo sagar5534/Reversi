@@ -45,11 +45,12 @@ class Board{
     private:
         //May be Move tiles
         Piece tiles [64];
-        int counter = 0;
+        
         void addToMoves(int);
         Move availMoves [140];
     public:
         Board();
+        int counter = 0;
         void reset();
         void display();
         void makeMove(Piece, Move);
