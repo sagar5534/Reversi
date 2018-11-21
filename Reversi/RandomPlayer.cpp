@@ -6,16 +6,25 @@
 using namespace std;
 
 RandomPlayer::RandomPlayer(Piece i):ComputerPlayer(i){
-    
+
 }
 RandomPlayer::~RandomPlayer(){
-    
+
 }
 void RandomPlayer::makeMove(Board& board){
    Move place;
-   place = srand()%64 +1;   
 
-  if(board.isLegal(Player::getPiece(),place) == true){
-        board.makeMove(Player::getPiece(),place);
-    }
+   bool legal = false;
+
+   while(legal == false){
+
+       place = srand()%64 +1;
+       if(board.isLegal(Player::getPiece(),place) == true){
+           legal = true;
+           board.makeMove(Player::getPiece(),place);
+       }
+
+   }
+
+
 }

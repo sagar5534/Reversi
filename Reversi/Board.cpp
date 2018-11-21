@@ -249,10 +249,10 @@ void Board::genMoves(){
 }
 
 int Board::numMoves() const{
-
     return counter;
 }
 
 Move Board::getMove(int move) const{
-    return 0;
+    Move temp = move;
+    return temp;
 }

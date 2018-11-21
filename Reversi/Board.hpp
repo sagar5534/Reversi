@@ -1,4 +1,3 @@
-
 //
 //  Board.hpp
 //  Reversi

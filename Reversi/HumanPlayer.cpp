@@ -4,7 +4,7 @@
 using namespace std;
 
 HumanPlayer::HumanPlayer(string name, Piece piece):Player(name,piece){
-    
+
 }
 
 HumanPlayer::~HumanPlayer()
@@ -16,6 +16,4 @@ void HumanPlayer::makeMove(Board& board){
     Move place;
     cin >> place;
     board.makeMove(Player::getPiece(), place);
-
-    
 }
