@@ -16,49 +16,24 @@ Board::Board(){
 
 void Board::reset(){
 
+    Piece tiles [64];
     for (int i = 0; i < 64; i++) {
-        Board::tiles[i] = Piece::EMPTY;
+        tiles[i] = Piece::EMPTY;
     }
-
-    Board::tiles[27] = Piece::DARK;
-    Board::tiles[28 + 2] = Piece::DARK;
-    Board::tiles[35 + 3 ] = Piece::DARK;
-    Board::tiles[36] = Piece::WHITE;
-
-    Board::tiles[42 + 3] = Piece::WHITE;
-    Board::tiles[46] = Piece::DARK;
 
 }
 
 void Board::display(){
 
-    std::cout << "----------------------------------" << '\n';
+    std::cout << "--------------------" << '\n';
 
-    for (int i = 0; i < 8; i++) {
-        std::cout << "   " << i+1;
-    }
-    std::cout << '\n';
-    int count = 0;
-    for (int i = 0; i < 8; i++) {
-        std::cout << i+1;
-        for (int x = count; x < count + 8; x++) {
-            cout << " [" << ToString(tiles[x]) << ']';
-        }
-        cout << endl;
-        count += 8;
-    }
 
-    std::cout << "----------------------------------" << '\n';
+
+    std::cout << "--------------------" << '\n';
 
 }
 
 void Board::makeMove(Piece piece, Move move){
-
-    if (isLegal(piece, move)) {
-
-    }else{
-        std::cout << "! Not a legal move !" << '\n';
-    }
 
 }
 

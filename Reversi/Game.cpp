@@ -10,6 +10,8 @@
 #include <iostream>
 #include "Board.hpp"
 #include "Player.hpp"
+#include "HumanPlayer.hpp"
+#include "RandomPlayer.hpp"
 using namespace std;
 
 Game::Game(){
@@ -22,7 +24,6 @@ Game::~Game(){
   delete p1;
   delete p2;
 }
-/*
 void Game::selectPlayers(){
     int playertoplayer = 1;
     int playertocomputer = 2;
@@ -31,12 +32,21 @@ void Game::selectPlayers(){
     cin >> choose;
     if (choose == playertocomputer){
         string name;
-        cout << "Enter the players name";
+        cout << "Enter the player's name";
         cin>> name;
-
-
+      p1 = new HumanPlayer(name, Piece::DARK);
+      p2 = new RandomPlayer(Piece::WHITE);
   }
-   
+}
+
+*Player Game::nextPlayer() const {
 
 }
- */
+
+void Game::play(){
+
+}
+
+void announceWinner(){
+
+}
