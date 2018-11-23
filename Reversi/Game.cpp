@@ -29,7 +29,15 @@ void Game::selectPlayers(){
     int playertocomputer = 2;
     int computertocomputer = 3;
     int choose;
+
+    cout << "Select Type of Game:" << endl
+    << "1 - Player VS Player" << endl
+    << "2 - Player VS Computer" << endl
+    << "3 - Computer VS Computer(Spectate)" << endl;
+
     cin >> choose;
+    //TODO Error CHECKER
+
     if (choose == playertocomputer){
         string name;
         cout << "Enter the player's name";
@@ -39,9 +47,10 @@ void Game::selectPlayers(){
   }
 }
 
-*Player Game::nextPlayer() const {
+//In progress
+//Player Game::nextPlayer() const {
 
-}
+//}
 
 void Game::play(){
 
