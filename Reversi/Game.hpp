@@ -16,7 +16,7 @@
 class Game{
 private:
     Board board;
-    Player *p1, *p2;
+    Player *p1, *p2, *currentPlayer;
     bool isRunning;
 public:
     Game();

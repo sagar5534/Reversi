@@ -20,6 +20,7 @@ Game::Game(){
     board.reset();
     p1 = nullptr;
     p2 = nullptr;
+    currentPlayer = p1;
 }
 
 Game::~Game(){
@@ -68,7 +69,7 @@ void Game::selectPlayers(){
             correctInput = true;
             p1 = new RandomPlayer(Piece::DARK);
             p2 = new RandomPlayer(Piece::WHITE);
-            cout << "Both Computers Created" << endl;
+            cout << "Both Computers Created\n" << endl;
 
         }else{
             cout << "** Please enter a Correct Value **" << endl;
@@ -79,38 +80,55 @@ void Game::selectPlayers(){
   }
 
 //In progress
-Player* Game::nextPlayer() const {
+Player* Game::nextPlayer() const{
 
-    return p1;
+    if (board.turn == p1->getPiece()){
+        //turn=p1
+        board.turn = p2->getPiece();
+        return p2;
+    }else{
+        //turn=p2
+        board.turn = p1->getPiece();
+        return p1;
+    }
+
 }
 
 void Game::play(){
 
+    cout << "\nStarting Game" << endl;
     isRunning = true;
+    currentPlayer = p1;
 
     while (isRunning == true) {
-        //Play Game
         board.display();
-        
+        //Display Players Turn
+        int player = (currentPlayer->getPiece() == Piece::DARK) ? 1:2;
+        cout << "Player " << player << "\'s Turn\n";
 
-        isRunning = false;
+        //Make Move
+        currentPlayer->makeMove(board);
+
+        //Next Round
+        currentPlayer = nextPlayer();
+        //isRunning = false;
     }
 
-    cout << "END" << endl;
+    announceWinner();
 
 }
 
 void Game::announceWinner(){
 
     Piece winner = board.getWinner();
-
+    cout << endl;
     if (winner == Piece::DARK){
         cout << "** Player 1 has WON **" << endl;
     }
     else if(winner == Piece::WHITE){
         cout << "** Player 2 has WON **" << endl;
     }else{
-
+        cout << "** Game is a TIE **" << endl;
     }
 
 }

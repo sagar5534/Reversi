@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 //Enum for Types of Pieces
-enum Piece {WHITE, DARK, EMPTY};
+enum Piece {DARK, WHITE, EMPTY};
 inline const char* ToString(Piece v)
 {
     switch (v)
@@ -28,6 +28,7 @@ inline const char* ToString(Piece v)
     }
 }
 
+
 typedef int Move;
 const Move nullMove = -1;
 
@@ -38,9 +39,9 @@ class Board{
         Piece tiles [64];
         void addToMoves(int);
         Move availMoves [140];
+        int counter = 0;
     public:
         Board();
-        int counter = 0;
         void reset();
         void display();
         void makeMove(Piece, Move);
@@ -50,6 +51,7 @@ class Board{
         void genMoves();
         int numMoves() const;
         Move getMove(int) const;
+        mutable Piece turn;
 };
 
 #endif /* Board_hpp */

@@ -7,19 +7,25 @@
 //
 
 #include "Board.hpp"
+#include "Game.hpp"
 #include <iostream>
 using namespace std;
 
 Board::Board(){
     reset();
+    turn = Piece::DARK;
 }
 
 void Board::reset(){
 
-    Piece tiles [64];
     for (int i = 0; i < 64; i++) {
-        tiles[i] = Piece::EMPTY;
+        Board::tiles[i] = Piece::EMPTY;
     }
+
+    Board::tiles[27] = Piece::WHITE;
+    Board::tiles[28] = Piece::DARK;
+    Board::tiles[35] = Piece::DARK;
+    Board::tiles[36] = Piece::WHITE;
 
 }
 
@@ -27,21 +33,21 @@ void Board::display(){
 
     std::cout << "----------------------------------" << '\n';
 
-   for (int i = 0; i < 8; i++) {
-       std::cout << "   " << i+1;
-   }
-   std::cout << '\n';
-   int count = 0;
-   for (int i = 0; i < 8; i++) {
-       std::cout << i+1;
-       for (int x = count; x < count + 8; x++) {
-           cout << " [" << ToString(tiles[x]) << ']';
-       }
-       cout << endl;
-       count += 8;
-   }
+    for (int i = 0; i < 8; i++) {
+        std::cout << "   " << i+1;
+    }
+    std::cout << '\n';
+    int count = 0;
+    for (int i = 0; i < 8; i++) {
+        std::cout << i+1;
+        for (int x = count; x < count + 8; x++) {
+            cout << " [" << ToString(tiles[x]) << ']';
+        }
+        cout << endl;
+        count += 8;
+    }
 
-   std::cout << "----------------------------------" << '\n';
+    std::cout << "----------------------------------" << '\n';
 
 }
 
@@ -95,8 +101,7 @@ Piece Board::getWinner() const{
 }
 
 Piece Board::getPlayer() const{
-
-    return Piece::WHITE;
+    return turn;
 }
 
 void Board::addToMoves(int move){
