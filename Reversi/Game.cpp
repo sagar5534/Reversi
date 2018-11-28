@@ -86,10 +86,14 @@ Player* Game::nextPlayer() const {
 
 void Game::play(){
 
-    isRunning = false;
+    isRunning = true;
 
     while (isRunning == true) {
         //Play Game
+        board.display();
+        
+
+        isRunning = false;
     }
 
     cout << "END" << endl;
