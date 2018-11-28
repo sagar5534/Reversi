@@ -13,11 +13,11 @@
 #include "Board.hpp"
 #include "Player.hpp"
 
-
 class Game{
 private:
     Board board;
-    Player *p1,*p2;
+    Player *p1, *p2;
+    bool isRunning;
 public:
     Game();
     ~Game();
@@ -25,6 +25,5 @@ public:
     Player* nextPlayer() const;
     void play();
     void announceWinner();
-    
 };
 #endif /* Game_hpp */

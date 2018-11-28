@@ -36,7 +36,6 @@ class Board{
     private:
         //May be Move tiles
         Piece tiles [64];
-        
         void addToMoves(int);
         Move availMoves [140];
     public:

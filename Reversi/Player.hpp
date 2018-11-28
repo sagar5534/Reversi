@@ -16,15 +16,17 @@
 using namespace std;
 
 class Player {
+
+    private:
+        string name;
+        Piece piece;
+
     public:
         Player( const string&, Piece);
         Piece getPiece() const;
         virtual void makeMove( Board& ) = 0;
         virtual ~Player();
 
-    protected:
-        string name;
-        Piece piece;
 };
 
 #endif /* Player_hpp */
