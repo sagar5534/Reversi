@@ -25,15 +25,33 @@ void Board::reset(){
 
 void Board::display(){
 
-    std::cout << "--------------------" << '\n';
+    std::cout << "----------------------------------" << '\n';
 
+   for (int i = 0; i < 8; i++) {
+       std::cout << "   " << i+1;
+   }
+   std::cout << '\n';
+   int count = 0;
+   for (int i = 0; i < 8; i++) {
+       std::cout << i+1;
+       for (int x = count; x < count + 8; x++) {
+           cout << " [" << ToString(tiles[x]) << ']';
+       }
+       cout << endl;
+       count += 8;
+   }
 
-
-    std::cout << "--------------------" << '\n';
+   std::cout << "----------------------------------" << '\n';
 
 }
 
 void Board::makeMove(Piece piece, Move move){
+
+    if (isLegal(piece, move)) {
+
+    }else{
+            std::cout << "! Not a legal move !" << '\n';
+    }
 
 }
 
@@ -65,7 +83,15 @@ Piece Board::getWinner() const{
             return Piece::EMPTY;
         }
     }
-    return (darkNum > whiteNum) ? Piece::DARK : Piece::WHITE;
+
+    if (darkNum > whiteNum) {
+        return Piece::DARK;
+    }else if (whiteNum > darkNum){
+        return Piece::WHITE;
+    }else{
+        //Tie
+        return Piece::EMPTY;
+    }
 }
 
 Piece Board::getPlayer() const{
