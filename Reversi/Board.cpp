@@ -65,7 +65,15 @@ Piece Board::getWinner() const{
             return Piece::EMPTY;
         }
     }
-    return (darkNum > whiteNum) ? Piece::DARK : Piece::WHITE;
+
+    if (darkNum > whiteNum) {
+        return Piece::DARK;
+    }else if (whiteNum > darkNum){
+        return Piece::WHITE;
+    }else{
+        //Tie
+        return Piece::EMPTY;
+    }
 }
 
 Piece Board::getPlayer() const{

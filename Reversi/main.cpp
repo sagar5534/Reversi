@@ -16,13 +16,11 @@ using namespace std;
 #include "RandomPlayer.hpp"
 
 int main() {
-    // insert code here...
-    cout << "Hello, World!\n";
 
-    Player *p1 = new HumanPlayer("Noob",Piece::DARK);
-    delete p1;
- 
-    Player *p2= new RandomPlayer(Piece::WHITE);
-    delete p2;
-     
+    cout << "Welcome to Reversi\n";
+    Game game;
+
+    game.selectPlayers();
+    game.play();
+    game.announceWinner();
 }

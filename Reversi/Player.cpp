@@ -13,12 +13,11 @@ using namespace std;
 Player::Player( const string& name, Piece piece ){
     this-> name = name;
     this-> piece = piece;
-    
+
 }
 Player::~Player(){
-    
-}
 
+}
 
 Piece Player::getPiece() const {
     return piece;
