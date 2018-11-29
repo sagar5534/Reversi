@@ -15,18 +15,18 @@ RandomPlayer::~RandomPlayer(){
 }
 
 void RandomPlayer::makeMove(Board& board){
-   Move place;
 
-   bool legal = false;
+  bool correct = false;
+  do {
 
-   //while(legal == false){
+      Move place;
+      place = rand() % 64;
 
-       //place = rand() % board.counter;
-       //if(board.isLegal(Player::getPiece(),place) == true){
-        //   legal = true;
-        //   board.makeMove(Player::getPiece(),place);
-      // }
+      if (board.isLegal(Player::getPiece(), place)){
+          board.makeMove(Player::getPiece(), place);
+          correct = true;
+      }
 
-   //}
+  }while(correct == false);
 
 }

@@ -12,8 +12,20 @@ HumanPlayer::~HumanPlayer()
 
 }
 void HumanPlayer::makeMove(Board& board){
-    cout << "Where do you want to move your Piece"<<endl;
-    Move place;
-    cin >> place;
-    board.makeMove(Player::getPiece(), place);
+    bool correct = false;
+    do {
+        cout << "What is your next Move: "<<endl;
+
+        Move place;
+        cin >> place;
+
+        if (board.isLegal(Player::getPiece(), place)){
+            board.makeMove(Player::getPiece(), place);
+            correct = true;
+        }else{
+            correct = false;
+            cout << "** Incorrect Move. Please enter a correct Move **" << endl;
+        }
+
+    }while(correct == false);
 }

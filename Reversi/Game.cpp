@@ -99,6 +99,7 @@ void Game::play(){
     cout << "\nStarting Game" << endl;
     isRunning = true;
     currentPlayer = p1;
+    board.genMoves();
 
     while (isRunning == true) {
         board.display();
@@ -111,7 +112,9 @@ void Game::play(){
 
         //Next Round
         currentPlayer = nextPlayer();
-        //isRunning = false;
+        board.genMoves();
+        //isRunning = false;x
+
     }
 
     announceWinner();

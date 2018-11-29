@@ -49,15 +49,138 @@ void Board::display(){
 
     std::cout << "----------------------------------" << '\n';
 
+    cout << "Moves Available: [";
+    for (int i = 0; i < counter; i++){
+        if (i == counter - 1){
+        cout << availMoves[i];
+        }else{
+            cout << availMoves[i] << ", ";
+        }
+    }
+    cout << "]" << endl;
 }
 
 void Board::makeMove(Piece piece, Move move){
 
-    if (isLegal(piece, move)) {
+        //Change main tile
+        tiles[move] = piece;
+        Move currentTile = move;
+        //Change other tiles
+        Piece oppositePiece = (piece == Piece::WHITE) ? Piece::DARK : Piece::WHITE;
+        int testTile = 0;
 
-    }else{
-            std::cout << "! Not a legal move !" << '\n';
-    }
+        //UP
+        if (currentTile > 7){
+            testTile = currentTile - 8;
+            while (testTile > 7 && tiles[testTile] == oppositePiece) {
+                testTile -= 8;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile+=8;
+                }
+            }
+        }
+
+        //UPRIGHT
+        if ( (currentTile+1)%8 != 0 || (currentTile+1)%8 != 7 ){
+            testTile = currentTile - 7;
+            while (testTile > 15 && ((testTile+1)%8 != 0) && tiles[testTile] == oppositePiece ) {
+                testTile -= 7;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile+=7;
+                }
+            }
+
+        }
+
+        //RIGHT
+        if ( (currentTile+1)%8 != 0 && (currentTile+1)%8 != 7 ){
+            testTile = currentTile + 1;
+            while (testTile < 64 && tiles[testTile] == oppositePiece) {
+                testTile += 1;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile-=1;
+                }
+            }
+        }
+
+        //DOWNRIGHT
+        if ( (currentTile+1)%8 != 0 || (currentTile+1)%8 != 7 ){
+            testTile = currentTile + 9;
+            while (testTile < 56 && ((testTile+1)%8 != 0) && tiles[testTile] == oppositePiece ) {
+                testTile += 9;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile-=9;
+                }
+            }
+        }
+
+        //DOWN
+        if (currentTile < 48){
+            testTile = currentTile + 8;
+            while (testTile < 64 && tiles[testTile] == oppositePiece) {
+                testTile += 8;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile-=8;
+                }
+            }
+        }
+
+        //DOWNLEFT
+        if ((currentTile+1)%8 != 1 && (currentTile+1)%8 != 2){
+            testTile = currentTile + 7;
+            while (testTile < 56 && ((testTile+1)%8 != 1) && tiles[testTile] == oppositePiece ) {
+                testTile += 7;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile-=7;
+                }
+            }
+        }
+
+        //LEFT
+        if ((currentTile+1)%8 != 1 && (currentTile+1)%8 != 2){
+            testTile = currentTile - 1;
+            while (testTile > 0 && tiles[testTile] == oppositePiece) {
+                testTile -= 1;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile+=1;
+                }
+            }
+        }
+
+        //UPLEFT
+        if ((currentTile+1)%8 != 1 && (currentTile+1)%8 != 2){
+            testTile = currentTile - 9;
+            while (testTile > 7 && ((testTile+1)%8 != 1) && tiles[testTile] == oppositePiece ) {
+                testTile -= 9;
+            }
+            if (tiles[testTile] == piece) {
+                while (testTile != move) {
+                    tiles[testTile] = piece;
+                    testTile+=9;
+                }
+            }
+        }
 
 }
 
@@ -125,8 +248,8 @@ void Board::genMoves(){
     //Process entire Board
     for (int currentTile = 0; currentTile < 64; currentTile++) {
         //Tile is not Empty
-        if(tiles[currentTile] != Piece::EMPTY){
-
+        //if(tiles[currentTile] != Piece::EMPTY && ){
+        if (tiles[currentTile] == turn){
             //Test marker
             Piece oppositePiece = (tiles[currentTile] == Piece::WHITE) ? Piece::DARK : Piece::WHITE;
             int testTile = 0;
@@ -241,16 +364,6 @@ void Board::genMoves(){
         }
         //Moves to next piece
     }
-
-    cout << "Moves Available: [";
-    for (int i = 0; i < counter; i++){
-        if (i == counter - 1){
-            cout << availMoves[i];
-        }else{
-            cout << availMoves[i] << ", ";
-        }
-    }
-    cout << "]" << endl;
 
 }
 
