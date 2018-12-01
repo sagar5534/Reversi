@@ -1,11 +1,5 @@
-//
-//  ComputerPlayer.hpp
-//  Reversi
-//
-//  Created by Luna on 2018-11-11.
-//  Copyright © 2018 Sagar. All rights reserved.
-//
-
+//Sagar Patel; 0364296
+//Osama Esfar Sami; 0362386
 #ifndef ComputerPlayer_hpp
 #define ComputerPlayer_hpp
 

@@ -1,3 +1,5 @@
+//Sagar Patel; 0364296
+//Osama Esfar Sami; 0362386
 #include "RandomPlayer.hpp"
 #include "ComputerPlayer.hpp"
 #include "Player.hpp"

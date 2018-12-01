@@ -1,4 +1,5 @@
-
+//Sagar Patel; 0364296
+//Osama Esfar Sami; 0362386
 #ifndef HumanPlayer_hpp
 #define HumanPlayer_hpp
 
