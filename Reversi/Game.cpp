@@ -120,8 +120,6 @@ void Game::play(){
             board.display();
         }
     }
-
-    announceWinner();
 }
 
 void Game::announceWinner(){
