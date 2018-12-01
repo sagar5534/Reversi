@@ -22,6 +22,7 @@ void Board::reset(){
     for (int i = 0; i < 64; i++) {
         Board::tiles[i] = Piece::EMPTY;
     }
+
     //Indivdiually makes the center pieces into White and Black
     Board::tiles[27] = Piece::WHITE;
     Board::tiles[28] = Piece::DARK;

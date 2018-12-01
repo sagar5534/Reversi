@@ -8,7 +8,6 @@
 //Creating the HumanPlayer inherited from the abstract class Player
 class HumanPlayer : public Player
 {
-    
 
 public:
     //Argumented Constructor
@@ -17,7 +16,7 @@ public:
     virtual ~HumanPlayer();
     //makemove fucntion for the Human PLAYER
     virtual void makeMove(Board&);
-  
-    
+
+
 };
 #endif
