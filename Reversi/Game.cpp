@@ -58,7 +58,7 @@ void Game::selectPlayers(){
         else if(choose == playertocomputer){
 
             correctInput = true;
-            cout << "Enter Player name";
+            cout << "Enter Player name" << endl;
             cin >> name1;
             p1 = new HumanPlayer(name1, Piece::DARK);
             p2 = new RandomPlayer(Piece::WHITE);
@@ -102,23 +102,26 @@ void Game::play(){
     board.genMoves();
 
     while (isRunning == true) {
-        board.display();
+        cout << endl << endl;
         //Display Players Turn
-        int player = (currentPlayer->getPiece() == Piece::DARK) ? 1:2;
-        cout << "Player " << player << "\'s Turn\n";
-
+        cout << "Player " << currentPlayer->getName() << "\'s Turn\n";
+        board.display();
+        board.movesAvail();
         //Make Move
         currentPlayer->makeMove(board);
 
         //Next Round
         currentPlayer = nextPlayer();
         board.genMoves();
-        //isRunning = false;x
 
+        if (board.getWinner() != Piece::EMPTY) {
+            isRunning = false;
+            cout << endl;
+            board.display();
+        }
     }
 
     announceWinner();
-
 }
 
 void Game::announceWinner(){

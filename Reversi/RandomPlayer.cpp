@@ -16,17 +16,23 @@ RandomPlayer::~RandomPlayer(){
 
 void RandomPlayer::makeMove(Board& board){
 
-  bool correct = false;
-  do {
+    if (board.numMoves() != 0) {
 
-      Move place;
-      place = rand() % 64;
+        bool correct = false;
+        do {
 
-      if (board.isLegal(Player::getPiece(), place)){
-          board.makeMove(Player::getPiece(), place);
-          correct = true;
-      }
+          Move place;
+          place = rand() % 64;
 
-  }while(correct == false);
+          if (board.isLegal(Player::getPiece(), place)){
+              board.makeMove(Player::getPiece(), place);
+              correct = true;
+              cout << "Computer moved: " << place;
+          }
+
+        }while(correct == false);
+    }else{
+        cout << "Skipped " << getName() << endl;
+    }
 
 }

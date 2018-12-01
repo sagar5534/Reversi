@@ -49,6 +49,9 @@ void Board::display(){
 
     std::cout << "----------------------------------" << '\n';
 
+}
+
+void Board::movesAvail(){
     cout << "Moves Available: [";
     for (int i = 0; i < counter; i++){
         if (i == counter - 1){

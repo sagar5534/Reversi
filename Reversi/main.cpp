@@ -22,6 +22,5 @@ int main() {
 
     game.selectPlayers();
     game.play();
-    game.announceWinner();
 
 }

@@ -13,6 +13,7 @@ HumanPlayer::~HumanPlayer()
 }
 void HumanPlayer::makeMove(Board& board){
     bool correct = false;
+
     do {
         cout << "What is your next Move: "<<endl;
 

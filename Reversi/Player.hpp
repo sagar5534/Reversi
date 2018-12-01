@@ -26,6 +26,7 @@ class Player {
         Piece getPiece() const;
         virtual void makeMove( Board& ) = 0;
         virtual ~Player();
+        string getName();
 
 };
 

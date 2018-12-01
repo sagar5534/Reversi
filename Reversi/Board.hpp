@@ -52,6 +52,8 @@ class Board{
         int numMoves() const;
         Move getMove(int) const;
         mutable Piece turn;
+        void movesAvail();
+
 };
 
 #endif /* Board_hpp */
