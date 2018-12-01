@@ -2,12 +2,8 @@
 //Osama Esfar Sami; 0362386
 #include <iostream>
 using namespace std;
-#include "Player.hpp"
-#include "Board.hpp"
-#include "ComputerPlayer.hpp"
 #include "Game.hpp"
-#include "HumanPlayer.hpp"
-#include "RandomPlayer.hpp"
+
 
 int main() {
     //Enters the game, creates game object
