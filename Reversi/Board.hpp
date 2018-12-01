@@ -20,7 +20,7 @@ inline const char* ToString(Piece v)
         default:
             return "ERROR";
     }
-}clTabCtrl
+}
 
 
 typedef int Move;
