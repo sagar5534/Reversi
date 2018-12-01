@@ -10,10 +10,10 @@ using namespace std;
 #include "RandomPlayer.hpp"
 
 int main() {
-
+    //Enters the game, creates game object
     cout << "Welcome to Reversi\n";
     Game game;
-
+    //Selects the payers, runs the game and then announces winner
     game.selectPlayers();
     game.play();
     game.announceWinner();
