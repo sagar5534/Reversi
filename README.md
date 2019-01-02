@@ -7,5 +7,5 @@ Reversi/Othello Game developed in C++
 - Computes each possible play by each player
 
 <p align="left">
-<img src="Images/Terminal.png" width="400" title="Screenshot">
+<img src="Images/Terminal.png" width="550" title="Screenshot">
 </p
